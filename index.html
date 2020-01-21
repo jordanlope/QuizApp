@@ -17,8 +17,8 @@
             <button type='button'>Continue</button>
         </section>
         <section id="question-quiz">
-            <p class='score'>Score</p>
-            <p class='question'>Question Number</p>
+            <p id='score'>Score</p>
+            <p id='question-num'>Question Number</p>
             <h2>Who was the only president unanimously elected? Meaning all of the state representatives voted for him.</h2>
             <form>
                 <input type='radio' name='answer' value='Abraham Lincoln'>Abraham Lincoln
@@ -28,11 +28,57 @@
             </form>
             <button type='button'>Submit</button>
         </section>
+        <section id="question-correct">
+            <p id='score'>Score</p>
+            <p id='question-num'>Question Number</p>
+            <h2>Who was the only president unanimously elected? Meaning all of the state representatives voted for him.</h2>
+            <form>
+                <input type='radio' name='answer' value='Abraham Lincoln'>Abraham Lincoln
+                <input type='radio' name='answer' value='George W Bush'>George W Bush
+                <input type='radio' name='answer' value='George Washington'>George Washington
+                <input type='radio' name='answer' value='Theodore Roosevelt'>Theodore Roosevelt
+            </form>
+            <button type='button'>Submit</button>
+        </section>
+        <section id="question-incorrect">
+            <p id='score'>Score</p>
+            <p id='question-num'>Question Number</p>
+            <h2>Who was the only president unanimously elected? Meaning all of the state representatives voted for him.</h2>
+            <form>
+                <input type='radio' name='answer' value='Abraham Lincoln'>George Washington
+                <input type='radio' name='answer' value='George W Bush'>George W Bush
+                <div id="correct-answer">
+                    <input type='radio' name='answer' value='George Washington'>Abraham Lincoln
+                    <p id="feedback-incorrect">
+                        Incorrect
+                    </p>
+                </div>
+                <input type='radio' name='answer' value='Theodore Roosevelt'>Theodore Roosevelt
+            </form>
+            <button type='button'>Next</button>
+        </section>
+        <section id="question-correct">
+            <p id='score'>Score</p>
+            <p id='question-num'>Question Number</p>
+            <h2>Who was the only president unanimously elected? Meaning all of the state representatives voted for him.</h2>
+            <form>
+                <input type='radio' name='answer' value='Abraham Lincoln'>Abraham Lincoln
+                <input type='radio' name='answer' value='George W Bush'>George W Bush
+                <div id="correct-answer">
+                    <input type='radio' name='answer' value='George Washington'>George Washington
+                    <p id="feedback-correct">
+                        Correct
+                    </p>
+                </div>
+                <input type='radio' name='answer' value='Theodore Roosevelt'>Theodore Roosevelt
+            </form>
+            <button type='button'>Next</button>
+        </section>
         <section id="results-quiz">
             <h2>Quiz Results</h2>
-            <p>Results: 4/5</p>
+            <p id='results'>Results: 4/5</p>
             <button type='button'>Try Again</button>
-        </section>  
+        </section>
     </main>
     <script src="index.js"></script>
 </body>

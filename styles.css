@@ -23,3 +23,11 @@ section {
     top: 5px;
     right: 10px;
 }
+
+#feedback-incorrect {
+    color: red;
+}
+
+#feedback-correct {
+    color: green;
+}
