@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    
+    <header role="banner">
+        <h1>President's Quiz</h1>
+    </header>
+    <main id="content">
+        <section id="begin-quiz">
+            <h2>Start Quiz</h2>
+            <button type='button'>Continue</button>
+        </section>
+        <section id="question-quiz">
+            <p class='score'>Score</p>
+            <p class='question'>Question Number</p>
+            <h2>Who was the only president unanimously elected? Meaning all of the state representatives voted for him.</h2>
+            <form>
+                <input type='radio' name='answer' value='Abraham Lincoln'>Abraham Lincoln
+                <input type='radio' name='answer' value='George W Bush'>George W Bush
+                <input type='radio' name='answer' value='George Washington'>George Washington
+                <input type='radio' name='answer' value='Theodore Roosevelt'>Theodore Roosevelt
+            </form>
+            <button type='button'>Submit</button>
+        </section>
+        <section id="results-quiz">
+            <h2>Quiz Results</h2>
+            <p>Results: 4/5</p>
+            <button type='button'>Try Again</button>
+        </section>  
+    </main>
+    <script src="index.js"></script>
 </body>
 </html>
