@@ -16,17 +16,17 @@ function evalQuestion() {
             const selAnswer = $(this).closest('section').find('.checked').attr('value');
 
             if (!selAnswer) {
-                return promptSelection('No selection!');
+                return promptSelection('No selection!', style.noAnswer);
             } else if(checkAnswer(selAnswer) == 'correct') {
                 // Give user feedback
                 STORE.questionIndex += 1;
                 STORE.score += 1;
-                promptSelection('Correct!');
+                promptSelection('Correct!', style.correct);
                 nextButton();
             } else if(checkAnswer(selAnswer) == 'inCorrect') {
                 // Give user feedback
                 STORE.questionIndex += 1;
-                promptSelection('incorrect!');
+                promptSelection('incorrect!', style.incorrect);
                 nextButton();
             }
     })
@@ -65,13 +65,14 @@ function tryAgain() {
     });
 }
 
-function promptSelection(displayText) {
+function promptSelection(displayText, cl) {
+    console.log(cl);
     const feedback = $('form').closest('form').find('#feedback');
     console.log(feedback);
     if(!feedback) {
-        $('form').after('<p id="feedback">' + displayText + '</p>');
+        $('form').after('<p id="feedback" class="'+ cl +'">' + displayText + '</p>');
     } else {
-        $('form').find('#feedback').replaceWith('<p id="feedback">' + displayText + '</p>');
+        $('form').find('#feedback').replaceWith('<p id="feedback" class="'+ cl +'">' + displayText + '</p>');
     }
 }
 

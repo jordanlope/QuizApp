@@ -54,3 +54,9 @@ const STORE = {
     score: 0,
     questionIndex: 0,
 }
+
+const style = {
+    'correct': 'feedback-correct',
+    'incorrect': 'feedback-incorrect',
+    'noAnswer': 'feedback-noAnswer',
+}

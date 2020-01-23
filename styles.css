@@ -1,3 +1,13 @@
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    height: 100vh;
+}
+
 section {
     margin: auto;
     margin-bottom: 10px;
@@ -6,6 +16,8 @@ section {
     padding: 10px;
     text-align: center;
     position: relative;
+    background-color: white;
+    box-shadow: 2px 3px darkslategrey;
 }
 
 #question-quiz h2 {
@@ -49,7 +61,9 @@ section {
 .main-button {
     background-color:black;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
     color: white;
     width:50%;
     height: 30px;
@@ -69,4 +83,34 @@ section {
 .form-option:hover {
     background-color: white;
     color:black;
+}
+
+.feedback-correct {
+    color: white;
+    background-color: green;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.feedback-incorrect {
+    color: white;
+    background-color:red;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.feedback-noAnswer {
+    color: white;
+    background-color: blue;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
 }
