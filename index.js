@@ -25,8 +25,9 @@ function evalQuestion() {
                 nextButton();
             } else if(checkAnswer(selAnswer) == 'inCorrect') {
                 // Give user feedback
+                const feedback = 'incorrect! correct answer is ' +  STORE.questions[STORE.questionIndex].correctAnswer;
                 STORE.questionIndex += 1;
-                promptSelection('incorrect!', style.incorrect);
+                promptSelection(feedback, style.incorrect);
                 nextButton();
             }
     })
@@ -99,10 +100,6 @@ function renderQuestion(index, parentId) {
             "<h2>" + STORE.questions[index].question + "</h2>" +
             "<form onsubmit='return false;' class='js-quiz-form'>" +
                 generateQuizOptionsString(index) +
-                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[0] + "'>" +
-                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[1] + "'>" +
-                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[2] + "'>" +
-                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[3] + "'>" +
                 "<input type='submit' id='js-submit-button' class='main-button' value='Submit'>" +
                 "<p id='feedback'></p>" +
             "</form>" +
