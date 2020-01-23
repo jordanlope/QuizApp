@@ -98,15 +98,21 @@ function renderQuestion(index, parentId) {
             "<p id='question-num'>" + "QUESTION:" + (questionIndex) +"</p>" +
             "<h2>" + STORE.questions[index].question + "</h2>" +
             "<form onsubmit='return false;' class='js-quiz-form'>" +
-                "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[0] + "'>" +
-                "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[1] + "'>" +
-                "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[2] + "'>" +
-                "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[3] + "'>" +
+                generateQuizOptionsString(index) +
+                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[0] + "'>" +
+                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[1] + "'>" +
+                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[2] + "'>" +
+                // "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[3] + "'>" +
                 "<input type='submit' id='js-submit-button' class='main-button' value='Submit'>" +
                 "<p id='feedback'></p>" +
             "</form>" +
         "</section>"
     );
+}
+
+function generateQuizOptionsString(index) {
+    const items = STORE.questions[index].choices.map((choice, idx) => "<input type='button' aria-pressed='false' class='form-option js-form-option' name='answer' value='" + STORE.questions[index].choices[idx] + "'>");
+    return items.join("");
 }
 
 function renderResults(parentID) {

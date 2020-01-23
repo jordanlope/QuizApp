@@ -53,6 +53,7 @@ section {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    width: 40%;
     margin: 4px 2px;
     cursor: pointer;
     box-shadow: 2px 3px #888888;
